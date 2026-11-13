@@ -1,0 +1,14 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "alikhani-griswold-2026-connected-minus-four-family",
+  "version": 1,
+  "repository_url": "https://github.com/mathesis-papers/6aec385208e1c0a6e1f65a27",
+  "site_url": "https://papers.trureturing.org/6aec385208e1c0a6e1f65a27/",
+  "doi": "10.5281/zenodo.23919066",
+  "reading": {
+    "en": "https://papers.trureturing.org/6aec385208e1c0a6e1f65a27/en/",
+    "zh": "https://papers.trureturing.org/6aec385208e1c0a6e1f65a27/zh/"
+  },
+  "slides": [],
+  "visualizations": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "alikhani-griswold-2026-connected-minus-four-family",
+  "revision": 1,
+  "problem_ids": ["alikhani-griswold-2026-connected-minus-four-family"],
+  "topic": "Alikhani–Griswold, Section 4 item 3: infinitely many connected graphs with domination root −4",
+  "title": "Alikhani–Griswold, Section 4(3): connected graphs with domination root −4",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "We answer Section 4, item 3 of Alikhani and Griswold's On the Integer Domination Root Conjecture by constructing connected graphs with domination root −4 and unbounded order. Joining r copies of their 33-vertex graph through vertices adjacent to leaves gives a connected graph on 33r vertices whose domination polynomial is the rth power of the original polynomial. The root −4 has multiplicity exactly r, and the copies can be joined along a path with maximum degree seven. A mixed construction gives examples of every order at least 35, with maximum degree seven and cycle rank four. We give a complete set-bijection proof, an exact finite calculation for the base graph, and the scope of the corresponding Lean declarations.",
+  "summary": "A support-join construction yields connected graphs with 33r vertices, 37r−1 edges, maximum degree seven and domination root −4 of exact multiplicity r. A mixed construction gives every order n≥35 with cycle rank four, maximum degree seven and simple root −4. Each constructed graph containing H has exactly the integer roots 0, −2 and −4. The support-join identities are proved in writing; exact finite checks establish the base polynomial and 97 small examples; the pinned Lean result establishes the unbounded connected-family conclusion by its hub construction.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/a87bdf39e4517497a9773c0c724243bc700c5bb1/D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.lean"
+}

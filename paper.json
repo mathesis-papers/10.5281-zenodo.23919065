@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 78705,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "4bdf3ece7299b4053a045d88539ea211d37b0406794155ab03eed849b4075452"
+    },
+    "source": {
+      "bytes": 13887,
+      "matches_public": null,
+      "path": "manuscript/",
+      "public_sha256": null,
+      "sha256": "f2df6166ecbd33f1e983477f29f1f13293da93692a1125a90c6c96b8724ae935"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We answer Section 4, item 3 of Alikhani and Griswold's On the Integer Domination Root Conjecture by constructing connected graphs with domination root −4 and unbounded order. Joining r copies of their 33-vertex graph through vertices adjacent to leaves gives a connected graph on 33r vertices whose domination polynomial is the rth power of the original polynomial. The root −4 has multiplicity exactly r, and the copies can be joined along a path with maximum degree seven. A mixed construction gives examples of every order at least 35, with maximum degree seven and cycle rank four. We give a complete set-bijection proof, an exact finite calculation for the base graph, and the scope of the corresponding Lean declarations.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": "10.5281/zenodo.23919065",
+    "current_version": 1,
+    "doi": "10.5281/zenodo.23919066",
+    "lean_source": {
+      "revision": "a87bdf39e4517497a9773c0c724243bc700c5bb1",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/a87bdf39e4517497a9773c0c724243bc700c5bb1/D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/alikhani-griswold-2026-connected-minus-four-family/files/pdf?version=1"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-05T08:03:30.723288003Z",
+    "record": "alikhani-griswold-2026-connected-minus-four-family",
+    "repository_name": "6aec385208e1c0a6e1f65a27",
+    "source": {
+      "url": "/api/v1/collected-papers/alikhani-griswold-2026-connected-minus-four-family/files/source?version=1"
+    },
+    "title": "Alikhani–Griswold, Section 4(3): connected graphs with domination root −4",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-05T08:03:30.723288003Z",
+        "revision": "1",
+        "version": 1
+      }
+    ],
+    "work": "alikhani-griswold-2026-connected-minus-four-family"
+  }
+}
