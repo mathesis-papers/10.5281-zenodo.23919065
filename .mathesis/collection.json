@@ -1,7 +1,7 @@
 {
   "git_blobs": {
     ".github/workflows/pages.yml": "7879724db1358178aad7e9bed326a44be44f5a6a",
-    ".mathesis/generated.json": "36a46d126f2d756bf5e10b12582a54419afde357",
+    ".mathesis/generated.json": "202d221981e8658cc4f119bc6ae5c8c4ac9677b0",
     "CHANGELOG.md": "2f9434b115064e2729a8b3d886af5a610d051f75",
     "CITATION.cff": "9574bd20715ab6416ebecba582f198247c6590c5",
     "CONTRIBUTING.md": "ea69168fc2cb506b57b00de1ef588aaf011aa3da",
@@ -15,12 +15,13 @@
     "manuscript/connected-minus-four/note.tex": "6cbd4ee4e4aee17203a286868e166612c92ada17",
     "manuscript/connected-minus-four/verification.json": "85b6690798811d6875969d501e3a8deda6e969e9",
     "manuscript/connected-minus-four/verify.py": "cf9974f568d2e80f73927071207e0a4643778be0",
-    "paper.json": "e9722070221e59d7ad9b0be17644d19b5cdceb2e",
+    "paper.json": "ca9f00d3a72787876f976eb8ba9fa90a07f61bf0",
     "paper.pdf": "6bb9f9711b75c69dc45cbb520d2c56e2073501f3",
     "site/en/index.html": "d8b332a06c6be9c87acc23b98c95a0145470c84f",
-    "site/index.html": "3acfd1a31655355bd06577ac4ffd8053dfbfa523",
+    "site/index.html": "9d4d91065bc682d6faf9b09079aa5e1e2a8f191f",
     "site/mathesis-materials.json": "e13ddf7dd8e66916adfdd85d0ecd12169ea30a6b",
     "site/zh/index.html": "1eaedb3c42087ca3520eda18ab1937a6ae5fbdd5",
+    "source.archive": "966bf257567d6f14abf65f8768eb39e9c53948e0",
     "versions/v1/.mathesis/generated.json": "e4fdc26ac39dfe145e7c367c1d6c83c39fc23f73",
     "versions/v1/CHANGELOG.md": "2f9434b115064e2729a8b3d886af5a610d051f75",
     "versions/v1/CITATION.cff": "9574bd20715ab6416ebecba582f198247c6590c5",
@@ -36,12 +37,13 @@
     "versions/v1/manuscript/connected-minus-four/verification.json": "85b6690798811d6875969d501e3a8deda6e969e9",
     "versions/v1/manuscript/connected-minus-four/verify.py": "cf9974f568d2e80f73927071207e0a4643778be0",
     "versions/v1/paper.json": "6866fcfdfd98f292dc18e91a0b03527dc72d13c3",
-    "versions/v1/paper.pdf": "6bb9f9711b75c69dc45cbb520d2c56e2073501f3"
+    "versions/v1/paper.pdf": "6bb9f9711b75c69dc45cbb520d2c56e2073501f3",
+    "versions/v1/source.archive": "966bf257567d6f14abf65f8768eb39e9c53948e0"
   },
   "schema": "mathesis.paper-collection.v1",
   "sha256": {
     ".github/workflows/pages.yml": "f15d983dcb8f324ffdedb50b05f7380e11fda8723d49b5c8f10ef0f414612372",
-    ".mathesis/generated.json": "db95137c26d865fa964d8e50032b79def04651c995733645abf4447084a182f7",
+    ".mathesis/generated.json": "b98bf0522b5a8a89d18db0cdcf60002f5ce03f290921f7338e06f7b88e39a72d",
     "CHANGELOG.md": "dc078e1107fdee772fe48160e53e657029ac16d57d45b6da17c0576c5d0f5ea5",
     "CITATION.cff": "96861ec11855f2fbb2ace2441b34053d0a0feeab3a8da758c567127057abedda",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
@@ -55,12 +57,13 @@
     "manuscript/connected-minus-four/note.tex": "b8f11063d09e068e80e8d3744874023ac2f0ea84b14265aeb017d45d7f4b55bf",
     "manuscript/connected-minus-four/verification.json": "9f67ec1d4a210810adc2cc429a3f95b54445a16a1a8e8de34fceb1a6f3664c0e",
     "manuscript/connected-minus-four/verify.py": "3a04d3f9fd6af888c205295f016a1fc85f67e952b511856a67fed6924e4a3688",
-    "paper.json": "14c7c2076e24fb75b06f2d6d83fe85bdf49555b90c605999aa47c29f7201bb6f",
+    "paper.json": "3f93d3a258ccff264189b2947af5233eecb4ec2bf6a91255babb849e4c9e9993",
     "paper.pdf": "4bdf3ece7299b4053a045d88539ea211d37b0406794155ab03eed849b4075452",
     "site/en/index.html": "849b5e397f5953b46f7a3d10cc04253d299940930dae085b0408be35cc2ec162",
-    "site/index.html": "e58f0394e8d21f30363a41a376b7d15e5e948af0b5d84c3c03385fa9e5e9987b",
+    "site/index.html": "84f1a8a5ad3692e996c0f9ee747c9c3743bcae86ca34231bfe3802f7e4a64774",
     "site/mathesis-materials.json": "4c6b3b4c4e6b54a80166e9acfe6bea97df539fed2641b3d02c582a33be5da616",
     "site/zh/index.html": "7a3402671785ec1e80594d6fe1eeffd2026dac2d2b8e26f7cdde3903444f0a9a",
+    "source.archive": "f2df6166ecbd33f1e983477f29f1f13293da93692a1125a90c6c96b8724ae935",
     "versions/v1/.mathesis/generated.json": "5ce1f5701a83e8d3be3e1c5ef19f8ef8625592cf0e5709dcb9592fe5c6f19061",
     "versions/v1/CHANGELOG.md": "dc078e1107fdee772fe48160e53e657029ac16d57d45b6da17c0576c5d0f5ea5",
     "versions/v1/CITATION.cff": "96861ec11855f2fbb2ace2441b34053d0a0feeab3a8da758c567127057abedda",
@@ -76,7 +79,8 @@
     "versions/v1/manuscript/connected-minus-four/verification.json": "9f67ec1d4a210810adc2cc429a3f95b54445a16a1a8e8de34fceb1a6f3664c0e",
     "versions/v1/manuscript/connected-minus-four/verify.py": "3a04d3f9fd6af888c205295f016a1fc85f67e952b511856a67fed6924e4a3688",
     "versions/v1/paper.json": "b9aede7602988017a600fb679bbc054e274990a1c0d8d2ff0eea67f99de0cb7a",
-    "versions/v1/paper.pdf": "4bdf3ece7299b4053a045d88539ea211d37b0406794155ab03eed849b4075452"
+    "versions/v1/paper.pdf": "4bdf3ece7299b4053a045d88539ea211d37b0406794155ab03eed849b4075452",
+    "versions/v1/source.archive": "f2df6166ecbd33f1e983477f29f1f13293da93692a1125a90c6c96b8724ae935"
   },
   "version": 1,
   "work": "alikhani-griswold-2026-connected-minus-four-family"
