@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 78705,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "4bdf3ece7299b4053a045d88539ea211d37b0406794155ab03eed849b4075452",
       "sha256": "4bdf3ece7299b4053a045d88539ea211d37b0406794155ab03eed849b4075452"
     },
     "source": {
       "bytes": 13887,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "f2df6166ecbd33f1e983477f29f1f13293da93692a1125a90c6c96b8724ae935",
       "sha256": "f2df6166ecbd33f1e983477f29f1f13293da93692a1125a90c6c96b8724ae935"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 78705,
+      "sha256": "4bdf3ece7299b4053a045d88539ea211d37b0406794155ab03eed849b4075452",
       "url": "/api/v1/collected-papers/alikhani-griswold-2026-connected-minus-four-family/files/pdf?version=1"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "alikhani-griswold-2026-connected-minus-four-family",
     "repository_name": "10.5281-zenodo.23919065",
     "source": {
+      "bytes": 13887,
+      "sha256": "f2df6166ecbd33f1e983477f29f1f13293da93692a1125a90c6c96b8724ae935",
       "url": "/api/v1/collected-papers/alikhani-griswold-2026-connected-minus-four-family/files/source?version=1"
     },
     "title": "Alikhani–Griswold, Section 4(3): connected graphs with domination root −4",
