@@ -1,5 +1,5 @@
 [site]
-repo = "mathesis-papers/10.5281-zenodo.23919065"
+repo = "mathesis-papers/6aec385208e1c0a6e1f65a27"
 base_url = "https://papers.trureturing.org/10.5281-zenodo.23919065/"
 post_build = ["python3", "-c", "from pathlib import Path\nimport runpy\nscript = Path(\"docs/layer-mathesis/scripts/site.py\")\nif script.is_file():\n    runpy.run_path(str(script), run_name=\"__main__\")\nelse:\n    print(\"Mathesis post-build skipped: layer script is absent from repository being built\")\n"]
 languages = ["zh", "en"]
