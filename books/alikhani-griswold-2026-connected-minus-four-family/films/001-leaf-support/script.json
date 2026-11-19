@@ -1,0 +1,135 @@
+{
+  "voice": "af_heart",
+  "speed": 0.98,
+  "say": {
+    "Alikhani": "Ali khani",
+    "Griswold": "Griz wold",
+    "Lean": "Leen"
+  },
+  "music": {
+    "bpm": 84,
+    "progression": "d-minor"
+  },
+  "scenes": [
+    {
+      "id": "choices",
+      "name": "THREE CHOICES",
+      "lead": 0.8,
+      "tail": 0.7,
+      "lines": [
+        [
+          "Choose stations so that every station is selected or next to a selected station. This is a dominating set.",
+          "选择一些站点，让每个站点自己被选中，或邻接被选中的站点。这就是支配集。"
+        ],
+        [
+          "On a single edge, either end alone works, and choosing both ends works too.",
+          "一条边有三个合法选择：只选任意一端，或者两端都选。"
+        ],
+        [
+          "Give a choice of size k the weight x to the k. The polynomial is two x plus x squared. At minus four, its value is eight.",
+          "选中 k 个点就给权重 x 的 k 次方。多项式为二 x 加 x 平方，在负四处的值为八。"
+        ]
+      ]
+    },
+    {
+      "id": "obstacle",
+      "name": "THE CONNECTEDNESS OBSTACLE",
+      "lead": 0.8,
+      "tail": 0.7,
+      "lines": [
+        [
+          "Alikhani and Griswold supplied a connected thirty-three vertex graph H whose domination polynomial vanishes at minus four.",
+          "Alikhani 与 Griswold 给出一个三十三点连通图 H，其支配多项式在负四处为零。"
+        ],
+        [
+          "Separate copies multiply the polynomial, but they are disconnected. Adding an arbitrary edge can create new dominating choices.",
+          "分离的副本使多项式相乘，但图不连通。随意加边可能产生新的支配集。"
+        ],
+        [
+          "For two isolated vertices, both must be selected. Add an edge, and either singleton suddenly works. We need a protected attachment point.",
+          "两个孤立点必须全部选中。加边后，只选一端也突然合法。我们需要一个受到保护的连接点。"
+        ]
+      ]
+    },
+    {
+      "id": "leaf",
+      "name": "THE LEAF MECHANISM",
+      "lead": 0.8,
+      "tail": 0.7,
+      "lines": [
+        [
+          "A leaf w has just one neighbor, its support v. To cover the leaf, select w or select v.",
+          "叶子 w 只有一个邻居，即支撑点 v。要覆盖叶子，必须选 w 或选 v。"
+        ],
+        [
+          "Either way, the support is already covered inside its own piece. Now join only supports in different pieces.",
+          "无论哪种情况，支撑点都已在自己的零件中被覆盖。现在只连接不同零件的支撑点。"
+        ],
+        [
+          "Restrict any dominating choice to one piece. The leaf covers the support internally, and every other vertex has no outside neighbor. Restriction and union undo each other.",
+          "把整图的支配集限制到一个零件：叶子保证支撑点被内部覆盖，其他顶点没有外部邻居。限制与合并恰好互相撤销。"
+        ]
+      ]
+    },
+    {
+      "id": "chain",
+      "name": "ONE COPY, ONE FACTOR",
+      "lead": 0.8,
+      "tail": 0.7,
+      "lines": [
+        [
+          "In H, vertex five is a leaf next to vertex four. Join the copies of vertex four along a path.",
+          "在 H 中，顶点五是顶点四旁的叶子。将各副本的顶点四沿路径连接。"
+        ],
+        [
+          "The graph becomes connected, while the entire polynomial stays the product. With r copies there are thirty-three r vertices.",
+          "图变得连通，而整个多项式仍是各零件的乘积。r 份副本共有三十三 r 个顶点。"
+        ],
+        [
+          "The original root is simple, so the new root has multiplicity exactly r. Supports gain at most two neighbors, keeping maximum degree seven.",
+          "原来的根是单根，因此新图中根的重数恰为 r。支撑点至多增加两个邻居，最大度保持为七。"
+        ]
+      ]
+    },
+    {
+      "id": "sizes",
+      "name": "EVERY ORDER AT LEAST 35",
+      "lead": 0.8,
+      "tail": 0.7,
+      "lines": [
+        [
+          "To fill the gaps between multiples of thirty-three, start with one H and attach single edges or three-vertex paths through their supports.",
+          "要填补三十三倍数之间的空隙，从一份 H 开始，通过支撑点连接单边或三点路径。"
+        ],
+        [
+          "These pieces add two or three vertices. Their values at minus four are eight and minus twenty, so the root stays simple.",
+          "这些零件分别增加两点或三点。在负四处的值为八和负二十，所以原来的单根保持不变。"
+        ],
+        [
+          "Every increment of at least two is a sum of twos and threes. This gives every order at least thirty-five, with maximum degree seven and cycle rank four.",
+          "每个至少为二的增量都能写成若干个二与三的和。因此每个至少三十五的阶都有例子，最大度七、循环秩四。"
+        ]
+      ]
+    },
+    {
+      "id": "scope",
+      "name": "THE EXACT FORMAL CONCLUSION",
+      "lead": 0.8,
+      "tail": 0.7,
+      "lines": [
+        [
+          "The pinned Lean theorem proves that beyond every size threshold there is a connected graph whose ordinary domination polynomial vanishes at minus four.",
+          "所引 Lean 定理证明：超过任意大小上界，都存在一个连通图，其普通支配多项式在负四处为零。"
+        ],
+        [
+          "Its proof uses an extra hub and leaf. The path family, exact multiplicities, and every-order refinement have the paper's separate written proofs.",
+          "该形式证明使用额外中心点和叶子。路径族、精确重数及每阶细化在论文中有各自的书面证明。"
+        ],
+        [
+          "The idea is small: a leaf makes an outside connection unnecessary for domination. That lets one known root survive in arbitrarily large connected graphs.",
+          "核心想法很小：叶子让支配不再需要借助外部连接。这就使一个已知根保留在任意大的连通图中。"
+        ]
+      ]
+    }
+  ]
+}

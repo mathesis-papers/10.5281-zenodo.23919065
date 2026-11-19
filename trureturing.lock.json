@@ -1,0 +1,33 @@
+{
+  "schema": "trureturing-books.lock.v1",
+  "repo": "the-omega-institute/trureturing",
+  "branch": "dev",
+  "commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+  "pinned_at": "2026-11-08T12:32:04Z",
+  "declarations": {
+    "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.reassembly": {
+      "module": "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly",
+      "name": "D5.S3.Combinatorics.Graph.Domination.MinusFourReassembly.reassembly",
+      "kind": "theorem",
+      "statement_id": "sha256:6588425fa310240f0c84d58651ac64f5b93c7787e1b829c3f2d4196483e30132",
+      "line": 400,
+      "signature": "theorem reassembly (d : Decomposition) (x : ℤ) : evaluation d.graph x = (stateEvaluation d x)"
+    },
+    "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.result": {
+      "module": "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly",
+      "name": "D5.S3.Combinatorics.Graph.Domination.MinusFourReassembly.result",
+      "kind": "theorem",
+      "statement_id": "sha256:6588425fa310240f0c84d58651ac64f5b93c7787e1b829c3f2d4196483e30132",
+      "line": 571,
+      "signature": "theorem result : ∀ N : ℕ, ∃ n : ℕ, N < n ∧ ∃ G : SimpleGraph (Fin n), G.Connected ∧ ∑ S ∈ domSets G, (-4 : ℤ) ^ S.card = 0"
+    },
+    "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.zero_of_messages": {
+      "module": "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly",
+      "name": "D5.S3.Combinatorics.Graph.Domination.MinusFourReassembly.zero_of_messages",
+      "kind": "theorem",
+      "statement_id": "sha256:6588425fa310240f0c84d58651ac64f5b93c7787e1b829c3f2d4196483e30132",
+      "line": 442,
+      "signature": "theorem zero_of_messages (d : Decomposition) (x : ℤ) (table : Fin d.m → Bool → ℤ) (hm : ∀ i b, (message d x) i b = table i b) (hz : tableEvaluation d x table = 0) : evaluation d.graph x = 0"
+    }
+  }
+}

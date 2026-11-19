@@ -1,0 +1,207 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{连接图而不改变支配计数}
+\author{Haobo Ma \and Wenlin Zhang}
+\date{Version 1, 2026}
+\begin{document}
+% Manuscript: Title and abstract
+\begin{frame}
+\titlepage
+\note{报告基于已公开第 1 版论文，沿支配集、叶子连接、无限族和每阶构造展开。}
+\end{frame}
+% Manuscript: Sections 1--3
+\begin{frame}{路线}
+\tableofcontents
+\note{先讲直观例子，再讲双射与构造，最后明确证据范围。}
+\end{frame}
+\section{问题}
+% Manuscript: Section 1; original question Section 4(3)
+\begin{frame}{一个例子能否长成无限族？}
+\begin{itemize}
+\item Alikhani--Griswold 给出一个连通的 33 点图 $H$，$D(H,-4)=0$。
+\item 问题：能否得到任意大的连通例子？
+\item 答案：连接 $r\geq1$ 份 $H$，得到 $33r$ 点的路径族。
+\item 再用两点、三点零件，覆盖每个阶 $n\geq35$。
+\end{itemize}
+\note{先说明答案，再定义多项式。起点来自 S. Alikhani 与 M. Griswold，第 2 节定理 2.1 和推论 2.2；无限族问题是第 4 节第 3 问。33 点不是这里声称的最小阶。}
+\end{frame}
+% Manuscript: Section 1; definition of ordinary domination
+\begin{frame}{一条边的三个选择}
+支配集：每个顶点被选中，或邻接一个被选中的顶点。
+\[
+ a\;\text{---}\;b
+\]
+\begin{center}\begin{tabular}{c|c}
+选择 & 权重\\\hline
+$\{a\}$ & $x$\\
+$\{b\}$ & $x$\\
+$\{a,b\}$ & $x^2$
+\end{tabular}\end{center}
+\[D(K_2,x)=2x+x^2,\qquad D(K_2,-4)=8.\]
+图要连通；支配集本身不必连通。
+\note{空集不能覆盖这条边。每个选择只计一次。$x=-4$ 时三项为 $-4,-4,16$；负权相消不是负的计数。普通支配不同于要求选中子图连通的连通支配。}
+\end{frame}
+% Manuscript: Section 1; product motivation
+\begin{frame}{加边通常会改变计数}
+\[D(G,x)=\sum_{S\in\mathcal D(G)}x^{|S|}.\]
+\begin{itemize}
+\item 不交并：选择独立、大小相加，多项式相乘。
+\item $r$ 份不相连的 $H$ 已有多项式 $D(H,x)^r$。
+\item 但连接边可能创造新的支配集。
+\end{itemize}
+\begin{alertblock}{最小的提醒}
+两个孤立点：$x^2$。连接后：$x^2+2x$。
+\end{alertblock}
+\note{解释乘法来自 $x^{k+\ell}=x^kx^\ell$。问题不是得到多项式的幂，而是在保持这个幂的同时使图连通。}
+\end{frame}
+\section{机制}
+% Manuscript: Section 1; proof of Lemma 1
+\begin{frame}{叶子保证连接点已经被覆盖}
+\[w_i\;\text{---}\;v_i\quad\cdots\quad v_j\;\text{---}\;w_j\]
+\begin{itemize}
+\item $w_i$ 只有邻居 $v_i$。
+\item 覆盖 $w_i$ 必须选 $w_i$ 或 $v_i$。
+\item 无论选哪一个，$v_i$ 在原图中已被覆盖。
+\item 只在各 $v_i$ 之间加边，不改变叶子或其他顶点的邻居。
+\end{itemize}
+\note{省略号代表将加上的跨零件边。叶子强迫的不是一定选支撑点，而是一定在内部覆盖支撑点。两者不能混淆。}
+\end{frame}
+% Manuscript: Lemma 1, Section 1
+\begin{frame}{限制与并集互相撤销}
+\begin{bookresult}{support-join}
+各图 $H_i$ 有叶子 $w_i$，$N_{H_i}(w_i)=\{v_i\}$。任取支撑点间的简单连接图 $F$，有
+\[D(J_F,x)=\prod_{i=1}^rD(H_i,x).\]
+若 $r\geq1$ 且各 $H_i$、$F$ 连通，则 $J_F$ 连通。
+\end{bookresult}
+\begin{enumerate}
+\item 限制一个支配集到每个零件，仍然支配该零件。
+\item 合并局部支配集，得到整图支配集。
+\item 大小相加，故保留每项权重。
+\end{enumerate}
+\note{逐点解释限制：支撑点由叶子保证，其他顶点没有外部邻居。并集方向不需要额外条件，因为未删除旧边。引理是 Kotek 等无关边理论的特殊情形；这里有直接证明。}
+\end{frame}
+\section{构造}
+% Manuscript: Theorem 2, Section 1
+\begin{frame}{把副本的顶点 4 连成路径}
+\begin{bookresult}{path-family}
+每个整数 $r\geq1$ 都有连通图 $G_r$，满足
+\[|V(G_r)|=33r,\qquad |E(G_r)|=37r-1,\]
+\[D(G_r,x)=D(H,x)^r.\]
+最大度七，根 $-4$ 的重数恰为 $r$。
+\end{bookresult}
+\[D(H,x)=(x+4)A(x),\quad A(-4)\ne0\]
+\[\Longrightarrow\ D(G_r,x)=(x+4)^rA(x)^r.\]
+\note{基图中顶点 5 只邻接 4，故连接引理适用。重数恰好而非至少为 $r$，因为 $A(-4)^r\ne0$。$r=1$ 不加边，回到 $H$。}
+\end{frame}
+% Manuscript: Theorem 2 proof, Section 1
+\begin{frame}{边数和度数为什么受控？}
+\begin{center}\begin{tabular}{c|c}
+量 & 计算\\\hline
+顶点数 & $33r$\\
+边数 & $36r+(r-1)=37r-1$\\
+支撑点度数 & $\leq2+2=4$\\
+未变的最大度 & 顶点 12 的度为七
+\end{tabular}\end{center}
+\begin{itemize}
+\item 路径上的每个支撑点至多增加两个邻居。
+\item $r=N+1$ 给出 $33r>N$。
+\item 阶数不同的图不可能同构。
+\end{itemize}
+\note{表中度数是上界而不是每个支撑点的实际度。路径端点最多增加一条边；单份时不增加。顶点 12 不参与连接，因此最大度恰为七。}
+\end{frame}
+% Manuscript: Corollary 3, Section 3
+\begin{frame}{两点和三点填补阶数}
+\begin{bookresult}{every-order}
+每个整数 $n\geq35$ 都有连通例子，最大度七、循环秩四，$-4$ 为单根，整数根恰为 $0,-2,-4$。
+\end{bookresult}
+\[D(K_2,x)=x(x+2),\qquad D(K_2,-4)=8,\]
+\[D(P_3,x)=x(x^2+3x+1),\quad D(P_3,-4)=-20.\]
+\begin{center}\begin{tabular}{c|cc}
+阶 $n$ & $K_2$ 数量 $a$ & $P_3$ 数量 $b$\\\hline
+奇数 $n\geq35$ & $(n-33)/2$ & $0$\\
+偶数 $n\geq36$ & $(n-36)/2$ & $1$
+\end{tabular}\end{center}
+\note{仍以路径连接支撑点。这两个因子在 $-4$ 非零，故保留单根。$P_3$ 的中点单独支配，任意二点也支配，解释系数 $1,3,1$。35 与 36 是两种奇偶性的初始情形。}
+\end{frame}
+% Manuscript: Corollary 3 proof, Section 3
+\begin{frame}{同一个连接引理给出全部性质}
+\[|V(T_{a,b})|=33+2a+3b,\]
+\[|E(T_{a,b})|=36+2a+3b.\]
+\[D(T_{a,b},x)=D(H,x)[x(x+2)]^a[x(x^2+3x+1)]^b.\]
+\begin{itemize}
+\item 连通图的循环秩：$|E|-|V|+1=4$。
+\item 支撑点度数至多四，原有度七顶点不变。
+\item $x^2+3x+1$ 的判别式为五，没有整数根。
+\item 因而整数根仍恰为 $0,-2,-4$。
+\end{itemize}
+\note{公式适用所有 $a,b\geq0$。内部边数 $36+a+2b$，路径另加 $a+b$。整数根论证用到基图整数根已知，细节在阅读附录。该构造不需要先证明多份 $H$ 的路径族。}
+\end{frame}
+\section{证据}
+% Manuscript: Section 3; formalization scope
+\begin{frame}{形式定理精确覆盖什么？}
+\begin{bookresult}{unbounded-order}
+对每个 $N\in\mathbb N$，存在 $n>N$ 与 $\operatorname{Fin}(n)$ 上的连通简单图 $G$，使
+\[\sum_{S\in\mathcal D(G)}(-4)^{|S|}=0.\]
+\end{bookresult}
+其证明使用中心点与叶子：
+\[|V(R_r)|=33r+2,\qquad r=N+1\geq1,\]
+\[D(R_r,x)=x(x+2)D(H,x)^r.\]
+路径族的精确度数、重数与每阶构造有单独的书面证明。
+\note{绿色结果框只陈述无界阶结论。框外的公式解释形式证明采用的构造，不把它与 $33r$ 点路径族混为一谈。$r=0$ 时值为 8，不能用于根的论证。}
+\end{frame}
+% Manuscript: Section 3; scope table
+\begin{frame}{这个答案的边界}
+\begin{itemize}
+\item 回答：连通、无界阶、有界最大度的例子。
+\item 更细：每个 $n\geq35$ 都有单根例子。
+\item 不给出：最小可能阶数。
+\item 不分类：所有图的整数支配根。
+\item 34 点不在此配方内，不等于证明它不存在。
+\end{itemize}
+\begin{block}{后续形式化}
+复用已有重组与无界阶证明，补齐多项式连接、路径族的精确性质以及每阶构造。
+\end{block}
+\note{结尾突出已完成的数学答案并准确划界。共享请求分别追踪原文引理 1、定理 2 的更完整结论与推论 3，不重复要求已有无界阶证明。}
+\end{frame}
+% Manuscript: Bibliography
+\begin{frame}{来源}
+\small
+\begin{itemize}
+\item Haobo Ma, Wenlin Zhang. 本论文第 1 版。\href{https://doi.org/10.5281/zenodo.23919066}{DOI:10.5281/zenodo.23919066}。
+\item S. Alikhani, M. Griswold. \emph{On the Integer Domination Root Conjecture}. \href{https://arxiv.org/abs/2608.00109v1}{arXiv:2608.00109v1}。第 2 节与第 4 节第 3 问。
+\item T. Kotek, J. Preen, F. Simon, P. Tittmann, M. Trinks. \emph{Recurrence relations and splitting formulas for the domination polynomial}. EJC 19(3), P47 (2012). \href{https://doi.org/10.37236/2475}{DOI:10.37236/2475}。
+\end{itemize}
+\normalsize 阅读版有完整证明与三个共享贡献请求。
+\note{版本 DOI 指向本次解释的确切论文，不使用概念 DOI 替代版本引用。保留所引作者已核实的姓名形式与来源首字母。}
+\end{frame}
+\appendix
+\section{附录}
+% Manuscript: Section 2; core decomposition
+\begin{frame}{33 点计算如何变小？}
+核心是四边形 $C=\{0,1,2,3\}$，删除后留下八个零件。
+\[|B_i|=2,2,2,2,6,3,3,9.\]
+\[M_i(b;x)=\sum_{\substack{T\in\mathcal D(B_i)\\\boldsymbol1_{a_i\in T}=b}}x^{|T|}.\]
+\begin{itemize}
+\item 根有内部叶子，因此每个零件必须内部支配。
+\item 记录核心选择 $Z$ 与选中的根集 $A$。
+\item 只保留覆盖全部核心的状态。
+\item 608 个零件子集、4096 个核心与根状态。
+\end{itemize}
+\note{$a_i$ 是根，$b$ 为是否选中的零一标记。核心覆盖不是自动成立的，必须在组合时检查。阅读附录提供完整边表及系数。}
+\end{frame}
+% Manuscript: Section 2; factorization and integer roots
+\begin{frame}{单根与整数根}
+\[D(H,x)=x^{11}(x+2)(x+4)(x^2+3x+1)Q_{18}(x).\]
+\[D'(H,-4)=1100417597440000\ne0.\]
+\begin{itemize}
+\item $Q_{18}$ 首一，常数项为 36。
+\item 18 个正负约数代入均非零。
+\item 二次因子判别式五，无整数根。
+\item 因而整数根恰为 $0,-2,-4$。
+\end{itemize}
+这些完整多项式结论由论文书面计算支持。
+\note{Horner 计算与全部系数在阅读附录。非零导数给出精确单根，不只是存在根。不要把此页无徽章计算当成最终 Lean 定理的陈述。}
+\end{frame}
+% Manuscript: Section 3, verification scope
+\FormalVerification
+\end{document}

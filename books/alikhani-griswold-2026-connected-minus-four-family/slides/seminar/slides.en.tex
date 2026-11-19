@@ -1,0 +1,205 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Connecting graphs without changing domination counts}
+\author{Haobo Ma \and Wenlin Zhang}
+\date{Version 1, 2026}
+\begin{document}
+% Manuscript: Title and abstract
+\begin{frame}
+\titlepage
+\note{This talk explains the public version 1 paper through dominating choices, the leaf mechanism, the infinite family, and the every-order construction.}
+\end{frame}
+% Manuscript: Sections 1--3
+\begin{frame}{Route}
+\tableofcontents
+\note{Start with a small example, explain the bijection and constructions, then state the evidence scope.}
+\end{frame}
+\section{Question}
+% Manuscript: Section 1; original question Section 4(3)
+\begin{frame}{Can one example grow into an infinite family?}
+\begin{itemize}
+\item Alikhani--Griswold give a connected 33-vertex graph $H$ with $D(H,-4)=0$.
+\item Can connected examples have arbitrarily large order?
+\item Yes: link $r\geq1$ copies into a $33r$-vertex path family.
+\item Two- and three-vertex pieces then give every order $n\geq35$.
+\end{itemize}
+\note{Give the answer before the notation. Credit S. Alikhani and M. Griswold for the base graph, Theorem 2.1 and Corollary 2.2, and their Section 4 item 3 question. No minimum-order assertion is made here.}
+\end{frame}
+% Manuscript: Section 1; definition of ordinary domination
+\begin{frame}{Three choices on one edge}
+A dominating set selects or neighbors every vertex.
+\[a\;\text{---}\;b\]
+\begin{center}\begin{tabular}{c|c}
+Choice & Weight\\\hline
+$\{a\}$ & $x$\\
+$\{b\}$ & $x$\\
+$\{a,b\}$ & $x^2$
+\end{tabular}\end{center}
+\[D(K_2,x)=2x+x^2,\qquad D(K_2,-4)=8.\]
+The graph is connected; the chosen set need not be.
+\note{The empty choice does not dominate this edge. Count each subset once. At $x=-4$, the three terms are $-4,-4,16$. Signed cancellation is not a negative number of choices. Ordinary domination does not require the chosen induced subgraph to be connected.}
+\end{frame}
+% Manuscript: Section 1; product motivation
+\begin{frame}{An arbitrary new edge changes the count}
+\[D(G,x)=\sum_{S\in\mathcal D(G)}x^{|S|}.\]
+\begin{itemize}
+\item Disjoint pieces: independent choices, added sizes, multiplied polynomials.
+\item Disjoint copies already give $D(H,x)^r$.
+\item But connecting edges can create new dominating choices.
+\end{itemize}
+\begin{alertblock}{A two-vertex warning}
+Isolated vertices give $x^2$; an edge gives $x^2+2x$.
+\end{alertblock}
+\note{Explain multiplication through $x^{k+\ell}=x^kx^\ell$. The obstacle is preserving that product while making the graph connected.}
+\end{frame}
+\section{Mechanism}
+% Manuscript: Section 1; proof of Lemma 1
+\begin{frame}{The leaf covers the attachment point internally}
+\[w_i\;\text{---}\;v_i\quad\cdots\quad v_j\;\text{---}\;w_j\]
+\begin{itemize}
+\item The only neighbor of $w_i$ is $v_i$.
+\item Covering $w_i$ requires selecting $w_i$ or $v_i$.
+\item Either choice already covers $v_i$ inside its piece.
+\item Add edges only between supports $v_i$; leave all leaves untouched.
+\end{itemize}
+\note{The dots indicate a new edge between pieces. The leaf forces internal coverage of the support; it does not force the support itself to be selected. This distinction is the proof's crucial point.}
+\end{frame}
+% Manuscript: Lemma 1, Section 1
+\begin{frame}{Restriction and union undo each other}
+\begin{bookresult}{support-join}
+In each $H_i$, let $N_{H_i}(w_i)=\{v_i\}$. Any simple graph $F$ joining only the supports gives
+\[D(J_F,x)=\prod_{i=1}^rD(H_i,x).\]
+If $r\geq1$ and all $H_i$ and $F$ are connected, so is $J_F$.
+\end{bookresult}
+\begin{enumerate}
+\item Restrict a dominating set: each piece still dominates internally.
+\item Unite local dominating sets: the whole graph is dominated.
+\item Cardinalities add, preserving every weight.
+\end{enumerate}
+\note{For restriction, the leaf handles the support and every other vertex has no outside neighbor. The union direction holds since no old edge was removed. Credit Kotek and coauthors' irrelevant-edge theory; this is the direct special case used in the manuscript.}
+\end{frame}
+\section{Construction}
+% Manuscript: Theorem 2, Section 1
+\begin{frame}{Join the copies of vertex 4 along a path}
+\begin{bookresult}{path-family}
+For every integer $r\geq1$, a connected $G_r$ satisfies
+\[|V(G_r)|=33r,\qquad |E(G_r)|=37r-1,\]
+\[D(G_r,x)=D(H,x)^r.\]
+Its maximum degree is seven; $-4$ has multiplicity exactly $r$.
+\end{bookresult}
+\[D(H,x)=(x+4)A(x),\quad A(-4)\ne0\]
+\[\Longrightarrow\ D(G_r,x)=(x+4)^rA(x)^r.\]
+\note{Vertex 5 has sole neighbor 4, so the joining lemma applies. Multiplicity is exactly, not merely at least, $r$, because $A(-4)^r\ne0$. At $r=1$ no connecting edge is needed and the graph is $H$.}
+\end{frame}
+% Manuscript: Theorem 2 proof, Section 1
+\begin{frame}{Why do edges and degrees stay controlled?}
+\begin{center}\begin{tabular}{c|c}
+Quantity & Calculation\\\hline
+Vertices & $33r$\\
+Edges & $36r+(r-1)=37r-1$\\
+Support degrees & $\leq2+2=4$\\
+Unchanged maximum & Degree seven at vertex 12
+\end{tabular}\end{center}
+\begin{itemize}
+\item Each path support gains at most two neighbors.
+\item Take $r=N+1$ to get $33r>N$.
+\item Different orders force nonisomorphic graphs.
+\end{itemize}
+\note{The support entry is an upper bound. Path endpoints gain at most one edge and a single copy gains none. Vertex 12 is never used for attachment, so the maximum is exactly seven.}
+\end{frame}
+% Manuscript: Corollary 3, Section 3
+\begin{frame}{Two and three fill the missing orders}
+\begin{bookresult}{every-order}
+Every integer $n\geq35$ admits a connected example of maximum degree seven and cycle rank four, with simple root $-4$ and integer roots exactly $0,-2,-4$.
+\end{bookresult}
+\[D(K_2,x)=x(x+2),\qquad D(K_2,-4)=8,\]
+\[D(P_3,x)=x(x^2+3x+1),\quad D(P_3,-4)=-20.\]
+\begin{center}\begin{tabular}{c|cc}
+Order $n$ & Number $a$ of $K_2$ & Number $b$ of $P_3$\\\hline
+Odd $n\geq35$ & $(n-33)/2$ & $0$\\
+Even $n\geq36$ & $(n-36)/2$ & $1$
+\end{tabular}\end{center}
+\note{Join supports along a path again. The factors are nonzero at $-4$, so the root stays simple. For $P_3$, the middle singleton dominates and every pair dominates, explaining coefficients $1,3,1$. The first cases are orders 35 and 36.}
+\end{frame}
+% Manuscript: Corollary 3 proof, Section 3
+\begin{frame}{One joining lemma gives all the properties}
+\[|V(T_{a,b})|=33+2a+3b,\]
+\[|E(T_{a,b})|=36+2a+3b.\]
+\[D(T_{a,b},x)=D(H,x)[x(x+2)]^a[x(x^2+3x+1)]^b.\]
+\begin{itemize}
+\item Connected cycle rank: $|E|-|V|+1=4$.
+\item Supports have degree at most four; the degree-seven vertex stays.
+\item $x^2+3x+1$ has discriminant five, so no integer roots.
+\item Integer roots therefore remain exactly $0,-2,-4$.
+\end{itemize}
+\note{These formulas hold for all $a,b\geq0$. Internal edges contribute $36+a+2b$ and the joining path adds $a+b$. The integer-root deduction uses the base factorization in the reading appendix. This construction does not require the repeated-copy family first.}
+\end{frame}
+\section{Evidence}
+% Manuscript: Section 3; formalization scope
+\begin{frame}{What does the formal theorem state?}
+\begin{bookresult}{unbounded-order}
+For every $N\in\mathbb N$, there are $n>N$ and a connected simple graph $G$ on $\operatorname{Fin}(n)$ such that
+\[\sum_{S\in\mathcal D(G)}(-4)^{|S|}=0.\]
+\end{bookresult}
+Its proof uses a hub and leaf:
+\[|V(R_r)|=33r+2,\qquad r=N+1\geq1,\]
+\[D(R_r,x)=x(x+2)D(H,x)^r.\]
+Exact path-family degrees, multiplicities, and every-order examples have separate written proofs.
+\note{The Lean-backed box states only unbounded order. The formulas outside it explain the construction used by the proof; do not identify it with the $33r$-vertex path family. At $r=0$ the value is 8, so positive $r$ matters.}
+\end{frame}
+% Manuscript: Section 3; scope table
+\begin{frame}{The boundaries of the answer}
+\begin{itemize}
+\item Answer: connected examples of unbounded order and bounded maximum degree.
+\item More precisely: a simple-root example at every $n\geq35$.
+\item No minimum-order conclusion.
+\item No classification of integer roots for all graphs.
+\item The recipe misses 34; this does not prove nonexistence there.
+\end{itemize}
+\begin{block}{Further formalization}
+Reuse the existing reassembly and existence proofs; add polynomial joining, exact path-family properties, and the every-order construction.
+\end{block}
+\note{Keep the completed mathematical answer prominent and state its limits precisely. The shared requests track source Lemma 1, the fuller Theorem 2 conclusion, and Corollary 3; they do not request another proof of unbounded order.}
+\end{frame}
+% Manuscript: Bibliography
+\begin{frame}{Sources}
+\small
+\begin{itemize}
+\item Haobo Ma, Wenlin Zhang. This paper, version 1. \href{https://doi.org/10.5281/zenodo.23919066}{DOI:10.5281/zenodo.23919066}.
+\item S. Alikhani, M. Griswold. \emph{On the Integer Domination Root Conjecture}. \href{https://arxiv.org/abs/2608.00109v1}{arXiv:2608.00109v1}. Section 2 and Section 4, item 3.
+\item T. Kotek, J. Preen, F. Simon, P. Tittmann, M. Trinks. \emph{Recurrence relations and splitting formulas for the domination polynomial}. EJC 19(3), P47 (2012). \href{https://doi.org/10.37236/2475}{DOI:10.37236/2475}.
+\end{itemize}
+\normalsize The reading edition contains complete proofs and three shared contribution requests.
+\note{The version DOI identifies the exact paper explained here. Keep the concept DOI distinct and retain cited authors' source initials.}
+\end{frame}
+\appendix
+\section{Appendix}
+% Manuscript: Section 2; core decomposition
+\begin{frame}{How does the 33-vertex calculation shrink?}
+The core is the four-cycle $C=\{0,1,2,3\}$; removing it leaves eight pieces.
+\[|B_i|=2,2,2,2,6,3,3,9.\]
+\[M_i(b;x)=\sum_{\substack{T\in\mathcal D(B_i)\\\boldsymbol1_{a_i\in T}=b}}x^{|T|}.\]
+\begin{itemize}
+\item Each root has an internal leaf: dominate every piece internally.
+\item Record core choices $Z$ and selected roots $A$.
+\item Keep just the states covering the entire core.
+\item 608 component subsets and 4096 core/root states.
+\end{itemize}
+\note{Here $a_i$ is the root and $b$ records its selection. Core coverage is an additional condition, not automatic. The reading appendix gives all graph edges and coefficients.}
+\end{frame}
+% Manuscript: Section 2; factorization and integer roots
+\begin{frame}{Simple root and integer roots}
+\[D(H,x)=x^{11}(x+2)(x+4)(x^2+3x+1)Q_{18}(x).\]
+\[D'(H,-4)=1100417597440000\ne0.\]
+\begin{itemize}
+\item $Q_{18}$ is monic with constant coefficient 36.
+\item All 18 signed divisors give nonzero evaluations.
+\item The quadratic has discriminant five, so no integer roots.
+\item The integer roots are exactly $0,-2,-4$.
+\end{itemize}
+These full-polynomial facts have the manuscript's written calculation.
+\note{All coefficients and the Horner root test are in the reading appendix. A nonzero derivative proves a simple root, not merely a root. These unbadged polynomial facts are not conclusions of the final Lean theorem.}
+\end{frame}
+% Manuscript: Section 3, verification scope
+\FormalVerification
+\end{document}

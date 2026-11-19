@@ -1,0 +1,55 @@
+{
+  "book": "alikhani-griswold-2026-connected-minus-four-family",
+  "pending_claims": [],
+  "results": {
+    "support-join": {
+      "claim": "collected:alikhani-griswold-2026-connected-minus-four-family:1:s1",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.reassembly",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Leaf-support joining and domination polynomial product",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/203"
+      }
+    },
+    "path-family": {
+      "claim": "collected:alikhani-griswold-2026-connected-minus-four-family:1:s2",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Bounded-degree path family with exact root multiplicity",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/204"
+      }
+    },
+    "unbounded-order": {
+      "claim": "collected:alikhani-griswold-2026-connected-minus-four-family:1:s2",
+      "gids": [
+        "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.result"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8"
+    },
+    "every-order": {
+      "claim": "collected:alikhani-griswold-2026-connected-minus-four-family:1:s3",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Every order at least 35 with simple root minus four",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/205"
+      }
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "Alikhani–Griswold, Section 4(3): connected graphs with domination root −4",
+    "zh": "Alikhani–Griswold, Section 4(3): connected graphs with domination root −4"
+  },
+  "version": 1,
+  "work": "alikhani-griswold-2026-connected-minus-four-family"
+}

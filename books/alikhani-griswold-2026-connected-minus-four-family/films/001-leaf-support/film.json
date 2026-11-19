@@ -1,0 +1,29 @@
+{
+  "duration": "2:43",
+  "id": "001-leaf-support",
+  "lean": [
+    "D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.result"
+  ],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "alikhani-griswold-2026-connected-minus-four-family_001_cover.jpg",
+    "narrated_720p": "alikhani-griswold-2026-connected-minus-four-family_001_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-15",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://github.com/the-omega-institute/trureturing",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "A leaf forces internal coverage of an attachment point. Joining only these supports preserves domination polynomials, giving connected minus-four families and every order at least 35.",
+  "summary_zh": "叶子迫使连接点在原图内部被覆盖。只连接这样的支撑点就保留支配多项式，得到根为负四的连通无限族和每个至少三十五的阶。",
+  "title": "A leaf preserves a root",
+  "title_zh": "一片叶子保住一个根"
+}
