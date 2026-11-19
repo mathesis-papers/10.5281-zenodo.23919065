@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # 把图连起来，为什么计数不变？
 
 一个网络能不能越长越大、始终连通，却一直保留同一个计数多项式的根 $-4$？Haobo Ma 与 Wenlin Zhang 给出的答案是肯定的：把一个已知的 33 点网络复制 $r$ 份，再沿一条链连接特定顶点，就得到 $33r$ 个顶点的连通图；根 $-4$ 恰好重复 $r$ 次。他们还用两点、三点的小零件填补大小的空隙，得到**每一个顶点数 $n\geq35$** 的例子，且任何顶点的邻居都不超过七个。
@@ -12,10 +10,14 @@
 
 先看只有一条边的图 $K_2$，两端记为 $a,b$。
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | 选中的站点 | 为什么覆盖全图 | 权重 |
 | --- | --- | --- |
@@ -23,9 +25,13 @@
 | $\{b\}$ | $b$ 覆盖自己和 $a$ | $x$ |
 | $\{a,b\}$ | 两点都被选中 | $x^2$ |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 把所有支配集的权重相加，就得到**支配多项式**。选择 $k$ 个点贡献 $x^k$，所以
 
@@ -57,17 +63,25 @@ Alikhani 与 Griswold 的图 $H$ 有 33 个顶点、36 条边，且 $D(H,-4)=0$�
 
 下面的视频逐步画出叶子、连接点和连边，随后解释为什么多项式相乘。示意中的圆框代表整个原图，并不代表原图只有几个顶点。
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(breakable: false)[
 ```
+
+</section>
 
 ::: {.film src="001-leaf-support"}
 一片叶子如何让连接边不改变支配集；英文旁白配中英字幕。
 :::
 
+<section hidden="hidden">
+
 ```{=typst}
 ]
 ```
+
+</section>
 
 ## 复制一次，就多一个因子
 
@@ -99,19 +113,27 @@ $$
 
 在 $-4$ 处，两个小零件分别贡献 $8$ 与 $-20$，都不为零。它们既不消除原有根，也不增加该根的重数。
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | 目标顶点数 | 增加的零件 |
 | --- | --- |
 | 奇数 $n\geq35$ | $(n-33)/2$ 个 $K_2$ |
 | 偶数 $n\geq36$ | 一个 $P_3$ 和 $(n-36)/2$ 个 $K_2$ |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 例如 35 点用 $H+K_2$，36 点用 $H+P_3$，37 点用 $H+2K_2$。这里加号表示先取互不相交的零件，再连接其支撑顶点。连接沿路径进行，最大度仍为七。
 

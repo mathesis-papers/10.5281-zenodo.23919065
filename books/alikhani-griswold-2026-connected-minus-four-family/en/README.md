@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # Connecting graphs without changing the count
 
 Can a network grow arbitrarily large, stay connected, and keep the same number $-4$ as a root of its counting polynomial? Haobo Ma and Wenlin Zhang answer yes. They link $r$ copies of a known 33-vertex network into a chain, obtaining a connected graph on $33r$ vertices in which the root $-4$ occurs exactly $r$ times. With two- and three-vertex attachments, they also obtain **every order $n\geq35$**, with no vertex having more than seven neighbors.
@@ -12,10 +10,14 @@ Think of a graph as stations joined by lines. Choose stations at which to place 
 
 For a graph consisting of a single edge, called $K_2$, label the ends $a,b$.
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | Choice | Coverage | Weight |
 | --- | --- | --- |
@@ -23,9 +25,13 @@ For a graph consisting of a single edge, called $K_2$, label the ends $a,b$.
 | $\{b\}$ | $b$ covers both | $x$ |
 | $\{a,b\}$ | Both chosen | $x^2$ |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 The **domination polynomial** adds one term for every dominating choice. A choice of $k$ vertices contributes $x^k$, so
 
@@ -57,17 +63,25 @@ Restriction and union undo each other, preserving the total number of selected v
 
 The film draws the leaf, support, and new edge in sequence, then explains the polynomial product. Each outlined block represents a whole original graph, not a graph with only the few visible vertices.
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(breakable: false)[
 ```
+
+</section>
 
 ::: {.film src="001-leaf-support"}
 How one leaf makes a connecting edge preserve dominating choices; English narration with aligned English and Chinese subtitles.
 :::
 
+<section hidden="hidden">
+
 ```{=typst}
 ]
 ```
+
+</section>
 
 ## One copy, one more factor
 
@@ -99,19 +113,27 @@ $$
 
 At $-4$, these two small pieces contribute $8$ and $-20$, both nonzero. They neither remove the existing root nor increase its multiplicity.
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | Desired order | Pieces to add |
 | --- | --- |
 | Odd $n\geq35$ | $(n-33)/2$ copies of $K_2$ |
 | Even $n\geq36$ | One $P_3$ and $(n-36)/2$ copies of $K_2$ |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 For example, 35 vertices use $H+K_2$, 36 use $H+P_3$, and 37 use $H+2K_2$. Here the plus sign means disjoint pieces followed by edges between their supports. Arrange the supports along a path; the maximum degree stays seven.
 

@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # Sources and references
 
 1. Haobo Ma and Wenlin Zhang. *Alikhani–Griswold, Section 4(3): connected graphs with domination root −4*. Version 1, 2026. **Version DOI: [10.5281/zenodo.23919066](https://doi.org/10.5281/zenodo.23919066)**. Concept DOI: [10.5281/zenodo.23919065](https://doi.org/10.5281/zenodo.23919065). This explanation, talk, and film concern that version. Lemma 1, Theorem 2, and Corollary 3 share one counter in the original manuscript. The public [PDF](https://zenodo.org/api/records/23919066/files/note-v1.pdf/content) and [source](https://zenodo.org/api/records/23919066/files/source-v1.zip/content) are licensed CC BY 4.0.
@@ -8,6 +6,10 @@
 
 Formal proof links lead directly to public Lean source: [unbounded order](lean:D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.result), [reassembly](lean:D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.reassembly), and [message transfer](lean:D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.zero_of_messages). Each supports its own precise statement. Contribution links for the manuscript's three fuller statements are in [Precise statements and proofs](statements.md).
 
+<section hidden="hidden">
+
 ```{=typst}
 #pagebreak()
 ```
+
+</section>

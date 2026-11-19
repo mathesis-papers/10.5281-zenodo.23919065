@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # 附录：33 点起点
 
 本附录给出 [@path-family] 和 [@every-order] 所需的起点数据。图 $H$ 来自 S. Alikhani 与 M. Griswold，第 2 节、定理 2.1 与推论 2.2；本论文第 2 节按支配集分解重新计算它。这里把图、有限求和与因式分解明确列出。
@@ -8,10 +6,14 @@
 
 顶点为 $0,1,\ldots,32$。下表每行列出较小端点及其所有较大邻居，因而每条无向边恰出现一次。沿每个零件的内部路径都能到达四边形 $0,1,2,3,0$，故图连通。逐行数边得 36 条，顶点 12 的七个邻居为 $0,1,13,14,15,16,17$；其他顶点的度不超过七。顶点 4 只邻接 0 和 5，顶点 5 只邻接 4。
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | 较小端点 | 较大邻居 |
 | --- | --- |
@@ -33,9 +35,13 @@
 | 29 | 30 |
 | 31 | 32 |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 ## 从小零件重组
 
@@ -47,10 +53,14 @@ $$
 
 这里 $b\in\{0,1\}$；$b=1$ 表示选中根，$b=0$ 表示不选根。表中的值是有限个子集按此公式相加的结果。
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | 根 | 零件顶点 | $I_i$ | $M_i(0;-4)$ | $M_i(1;-4)$ |
 | --- | --- | --- | --- | --- |
@@ -63,9 +73,13 @@ $$
 | 21 | 21–23 | $\{2,3\}$ | 16 | -36 |
 | 24 | 24–32 | $\{3\}$ | 5888 | -20736 |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 对 $Z\subseteq C$ 与根指标集 $A\subseteq\{1,\ldots,8\}$，若每个核心顶点都在 $Z$ 中、邻接 $Z$，或属于某个 $i\in A$ 的 $I_i$，令 $c(Z,A)=1$，否则为零。于是
 
@@ -81,10 +95,14 @@ $$
 
 八个零件共有 $4\cdot2^2+2^6+2\cdot2^3+2^9=608$ 个待考察子集；核心与根选择共有 $2^4\cdot2^8=4096$ 个状态。按 $|Z|$ 分组，在 $x=-4$ 处的五项为：
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | $|Z|$ | 总贡献 |
 | --- | --- |
@@ -94,9 +112,13 @@ $$
 | 3 | −323840534118400 |
 | 4 | 323840534118400 |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 前三项相加为零，后两项相消，得 $D(H,-4)=0$。相同求和保留 $x$，给出
 
@@ -106,10 +128,14 @@ $$
 
 以下系数按升幂排列，完整指定 $Q_{18}$，避免把整数根断言藏在未给出的多项式里。
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | $j$ | $[x^j]Q_{18}$ |
 | --- | --- |
@@ -133,16 +159,24 @@ $$
 | 17 | 24 |
 | 18 | 1 |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
 
+</section>
+
 原文给出 $D'(H,-4)=1100417597440000\ne0$；也可由上述因式分解在 $x=-4$ 处求导得到，故 $-4$ 为单根。$Q_{18}$ 首一且常数项为 36，整数根只能是 36 的正负约数。将上表系数用 Horner 法代入，符号如下；每项均非零。
+
+<section hidden="hidden">
 
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | $d$ | $Q_{18}(-d)$ 符号 | $Q_{18}(d)$ 符号 |
 | --- | --- | --- |
@@ -156,8 +190,12 @@ $$
 | 18 | + | + |
 | 36 | + | + |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 二次因子的判别式为五，故无整数根。其余显式因子给出且仅给出整数根 $0,-2,-4$。以上分解有限求和对应 [Lean 的重组恒等式](lean:D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.reassembly)；[消息转移定理](lean:D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.zero_of_messages)要求输入恰为这些真实消息并且核心和为零。最终无界阶定理的证明内核检验了该图在 $-4$ 处的消息与抵消。这里给出的完整多项式、导数和整数根推导沿用论文书面计算，不把它们并入该最终形式定理的结论。

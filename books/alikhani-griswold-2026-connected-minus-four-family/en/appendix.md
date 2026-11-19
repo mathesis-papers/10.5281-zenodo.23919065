@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # Appendix: the 33-vertex starting point
 
 This appendix supplies the base facts used in [@path-family] and [@every-order]. The graph $H$ is due to S. Alikhani and M. Griswold, Section 2, Theorem 2.1 and Corollary 2.2. Section 2 of the present paper recalculates it by splitting dominating sets. We specify the graph, finite sum, and factorization here.
@@ -8,10 +6,14 @@ This appendix supplies the base facts used in [@path-family] and [@every-order].
 
 The vertices are $0,1,\ldots,32$. Each row lists a smaller endpoint and all its larger neighbors, so every undirected edge appears once. Internal paths in each piece reach the four-cycle $0,1,2,3,0$, proving connectedness. Counting the listed edges gives 36. Vertex 12 has seven neighbors $0,1,13,14,15,16,17$; every other degree is at most seven. Vertex 4 has precisely neighbors 0 and 5, and vertex 5 has sole neighbor 4.
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | Smaller endpoint | Larger neighbors |
 | --- | --- |
@@ -33,9 +35,13 @@ The vertices are $0,1,\ldots,32$. Each row lists a smaller endpoint and all its 
 | 29 | 30 |
 | 31 | 32 |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 ## Reassemble small pieces
 
@@ -47,10 +53,14 @@ $$
 
 Here $b\in\{0,1\}$; $b=1$ means that the root is selected, and $b=0$ that it is omitted. The table values are finite subset sums given by this formula.
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | Root | Piece vertices | $I_i$ | $M_i(0;-4)$ | $M_i(1;-4)$ |
 | --- | --- | --- | --- | --- |
@@ -63,9 +73,13 @@ Here $b\in\{0,1\}$; $b=1$ means that the root is selected, and $b=0$ that it is 
 | 21 | 21–23 | $\{2,3\}$ | 16 | -36 |
 | 24 | 24–32 | $\{3\}$ | 5888 | -20736 |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 For $Z\subseteq C$ and a set of root indices $A\subseteq\{1,\ldots,8\}$, let $c(Z,A)=1$ if each core vertex is selected in $Z$, adjacent to $Z$, or belongs to $I_i$ for some $i\in A$; otherwise let it be zero. Then
 
@@ -81,10 +95,14 @@ This is a complete finite formula: the edge table determines every term. The lea
 
 There are $4\cdot2^2+2^6+2\cdot2^3+2^9=608$ component subsets to consider, and $2^4\cdot2^8=4096$ core/root states. Grouping by $|Z|$ gives the following five contributions at $x=-4$:
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | $|Z|$ | Total contribution |
 | --- | --- |
@@ -94,9 +112,13 @@ There are $4\cdot2^2+2^6+2\cdot2^3+2^9=608$ component subsets to consider, and $
 | 3 | −323840534118400 |
 | 4 | 323840534118400 |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 The first three sum to zero, and the last two cancel, giving $D(H,-4)=0$. Keeping $x$ in the same sum gives
 
@@ -106,10 +128,14 @@ $$
 
 The coefficients below, in increasing degree, specify all of $Q_{18}$ so that the integer-root claim does not depend on an unspecified polynomial.
 
+<section hidden="hidden">
+
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | $j$ | $[x^j]Q_{18}$ |
 | --- | --- |
@@ -133,16 +159,24 @@ The coefficients below, in increasing degree, specify all of $Q_{18}$ so that th
 | 17 | 24 |
 | 18 | 1 |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
 
+</section>
+
 The source gives $D'(H,-4)=1100417597440000\ne0$, also obtained by differentiating the displayed factorization at $-4$. Thus the root is simple. Since $Q_{18}$ is monic with constant term 36, any integer root must be a signed divisor of 36. Horner substitution into the coefficient table gives the following signs; every entry is nonzero.
+
+<section hidden="hidden">
 
 ```{=typst}
 #block(width: 100%, breakable: false)[
 #align(center)[
 ```
+
+</section>
 
 | $d$ | $Q_{18}(-d)$ sign | $Q_{18}(d)$ sign |
 | --- | --- | --- |
@@ -156,8 +190,12 @@ The source gives $D'(H,-4)=1100417597440000\ne0$, also obtained by differentiati
 | 18 | + | + |
 | 36 | + | + |
 
+<section hidden="hidden">
+
 ```{=typst}
 ]]
 ```
+
+</section>
 
 The quadratic factor has discriminant five and no integer roots. The remaining displayed factors therefore give exactly the integer roots $0,-2,-4$. The finite decomposition sum corresponds to [Lean's reassembly identity](lean:D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.reassembly). The [message-transfer theorem](lean:D5/S3/Combinatorics/Graph/Domination/MinusFourReassembly.zero_of_messages) requires the table entries to be the exact messages and the covered core sum to be zero. The final unbounded-order proof checks those messages and cancellation at $-4$ for this graph. The full polynomial, derivative, and integer-root deduction above follow the manuscript's written calculation; they are not added to the conclusion of that final formal theorem.
